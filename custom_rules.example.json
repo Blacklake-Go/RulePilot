@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "custom_clash_dir": "",
+  "custom_proxy_group": "",
+  "sync_system_bypass": true,
+  "clean_dns_override": true,
+  "enable_local_controller": true,
+  "presets": {
+    "cn_live_streaming": true,
+    "cn_daily_apps_sites": true,
+    "cn_cloud_upload": true,
+    "cn_geosite_fallback": true,
+    "cn_pure_apps_process": true
+  },
+  "rules": [
+    {
+      "pattern": "127.0.0.1/32",
+      "target": "DIRECT",
+      "type": "IP-CIDR",
+      "comment": "Local Loopback Direct",
+      "position": "top"
+    },
+    {
+      "pattern": "192.168.0.0/16",
+      "target": "DIRECT",
+      "type": "IP-CIDR",
+      "comment": "Private LAN 192.168/16 Direct",
+      "position": "top"
+    },
+    {
+      "pattern": "10.0.0.0/8",
+      "target": "DIRECT",
+      "type": "IP-CIDR",
+      "comment": "Private LAN 10/8 Direct",
+      "position": "top"
+    },
+    {
+      "pattern": "172.16.0.0/12",
+      "target": "DIRECT",
+      "type": "IP-CIDR",
+      "comment": "Private LAN 172.16/12 Direct",
+      "position": "top"
+    }
+  ]
+}
